@@ -93,7 +93,8 @@ In this experiment, a hybrid model that combines a custom autoencoder with an Ef
 For the first scenario, using the original images, the model achieved an accuracy of 90.86% on the validation set after 20 epochs. The loss curves indicate a good model fit with the training and validation losses converging. The accuracy curves also show a steady increase in performance, indicating that the model has learned meaningful features for classification.
 
 ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/546e22a0-e7f7-4ce3-8525-7838415dea7c) ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/b6a28510-7d6f-411b-8590-7df6c8e1aa9b)
-  Figure 4: EfficientNetB0 Original image vs Autoencoded image
+  
+Figure 4: EfficientNetB0 Original image vs Autoencoded image
    
 ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/d9195fcd-0c7a-4214-8e8a-febd8d9c79f7) ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/2df7b4ff-7db9-45fb-a420-597f3f5cbcf4)   
 Figure 5: Original image with 256x256 size vs 128x128 size
@@ -125,7 +126,9 @@ Next, the input shape was reduced to (128, 128, 3) to examine the impact of resi
 Here's a table summarizing the results of the experiments:
 
 <img width="379" alt="image" src="https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/7a14a824-5b9f-4c5c-b45b-7363fa68457a">  
-![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/c3b74f44-162f-4cf0-bca1-3be1d1c8a93b) ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/3f059d4e-ca11-4827-8442-e702c189c235)
+
+![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/c3b74f44-162f-4cf0-bca1-3be1d1c8a93b)  ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/3f059d4e-ca11-4827-8442-e702c189c235)
+   
    Figure 7: Autoencoded image with 256x256 size vs 128x128 size
    
 It is worth noting that reducing the input size may have led to a loss of some information in the images. However, this trade-off seems to have been beneficial in this case, as it resulted in a more generalized model that performed better on the test set.
@@ -141,6 +144,7 @@ In the second experiment, the autoencoded images were resized to a smaller size 
 Academically, the results indicate that the model performs better on the validation set when using resized autoencoded images compared to the original size. However, the test accuracy remains constant, indicating that the resizing operation does not significantly impact the generalization ability of the model on unseen data. It is important to note that the test accuracy is much lower than the validation accuracy in the second experiment, which might be a point of further investigation. The discrepancy between validation and test accuracies may be due to differences in data distribution or data leakage, and further experiments can be conducted to identify the cause and improve the model's performance on the test set.
    
    ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/588963f0-ccbf-4ef0-909a-3285574334e6) ![image](https://github.com/Gregory-Anthony/Driver-Drowsiness-Detection/assets/20116295/eb8f0390-ff1b-442c-8d0f-25c6a39bb03e)
+
 Figure 8: Autoencoded and Original image with 256x256 size vs 128x128 size
 
 #### Comparison of Methodologies
